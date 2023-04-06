@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import CentresList from './components/Centers';
+import Customer from './components/Customer';
+import Rockets from './components/Rockets';
+import Spacecraft from './components/Spacecraft';
+import HomePage from './pages/Home';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+      <Link to="/">Home</Link>
+        <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/rockets" element={<Rockets />} />
+        <Route path="/customer" element={<Customer />} />
+        <Route path="/centres" element={<CentresList/>} />
+        <Route path="/spacecraft" element={<Spacecraft/>} />
+        </Routes>
+    </Router>
+      
     </div>
   );
 }
