@@ -2,6 +2,10 @@
 
 This is a simple React app that fetches data from the ISRO API and displays it in four different routes: `/rockets`, `/customer`, `/spacecraft`, and `/centres`.
 
+## Deployment Link
+https://lively-fudge-5208d4.netlify.app/
+
+
 ## Installation
 
 To install the app, follow these steps:
